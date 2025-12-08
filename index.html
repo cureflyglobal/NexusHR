@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard – HR Portal</title>
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<!-- Header + Sidebar -->
+<header class="header">
+  <button class="btn menu" data-toggle="sidebar" aria-label="Open Menu">☰</button>
+  <div class="search"><input type="search" placeholder="Search"><button>Search</button></div>
+  <div class="user"><span class="badge">Employee</span><img src="assets/img/user.png" alt="User" width="36" height="36" style="border-radius:50%"></div>
+</header>
+<div class="app">
+  <aside class="sidebar" role="navigation" aria-label="Sidebar">
+    <div class="brand">HR Portal</div>
+    <nav class="nav">
+      <a href="index.html">🏠 <span>Dashboard</span></a><a href="attendance.html">🕒 <span>Attendance</span></a>
+      <a href="leave.html">🌴 <span>Leave</span></a><a href="payroll.html">💳 <span>Payroll</span></a>
+      <a href="tasks.html">🗂 <span>Tasks</span></a><a href="performance.html">📈 <span>Performance</span></a>
+      <a href="training.html">🎓 <span>Training</span></a><a href="directory.html">👥 <span>Directory</span></a>
+      <a href="travel-expense.html">✈️ <span>Travel & Expense</span></a><a href="documents.html">📄 <span>Documents</span></a>
+      <a href="helpdesk.html">🛠 <span>Help Desk</span></a><a href="settings.html">⚙️ <span>Settings</span></a>
+      <div style="height:.75rem"></div><a href="login.html">🔐 <span>Log out</span></a>
+    </nav>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <!-- Replace with your Canva dashboard HTML -->
+      <div class="grid three">
+        <div class="card">
+          <h3>Quick Actions</h3>
+          <div class="grid four">
+            <button class="btn">Apply Leave</button>
+            <button class="btn">Check-in</button>
+            <button class="btn">Log Hours</button>
+            <button class="btn">View Payslip</button>
+          </div>
+        </div>
+        <div class="card"><h3>Attendance Summary</h3><p>Present: 20 | Absent: 1 | Leave: 2</p></div>
+        <div class="card"><h3>Announcements</h3><ul><li>Holiday on Friday</li><li>Appraisal cycle starts next week</li></ul></div>
+      </div>
+      <div class="grid two" style="margin-top:1rem">
+        <div class="card">
+          <h3>Tasks</h3>
+          <table class="table"><thead><tr><th>Task</th><th>Status</th><th>Due</th></tr></thead>
+            <tbody>
+              <tr><td>Submit KYC</td><td><span class="badge">Pending</span></td><td>Dec 12</td></tr>
+              <tr><td>Policy Acknowledgement</td><td><span class="badge">In Progress</span></td><td>Dec 15</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card"><h3>Upcoming Events</h3><ul><li>Training: Data Privacy – Dec 14</li><li>Townhall – Dec 20</li></ul></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
