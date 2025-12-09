@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HR Employee Portal - Premium Admin Template</title>
+    <title>HR Employee Portal - Dashboard</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -29,6 +29,18 @@
                 </a>
                 <a class="sidebar-item" href="#">
                     <span class="sidebar-icon"><i class="fas fa-calendar-check"></i></span> <span>Attendance</span>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <span class="sidebar-icon"><i class="fas fa-sign-out-alt"></i></span> <span>Leave</span>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <span class="sidebar-icon"><i class="fas fa-money-check-alt"></i></span> <span>Payroll</span>
+                </a>
+                 <a class="sidebar-item" href="#">
+                    <span class="sidebar-icon"><i class="fas fa-tasks"></i></span> <span>Tasks</span>
+                </a>
+                <a class="sidebar-item" href="#">
+                    <span class="sidebar-icon"><i class="fas fa-chart-line"></i></span> <span>Performance</span>
                 </a>
                  <a class="sidebar-item" href="#">
                     <span class="sidebar-icon"><i class="fas fa-users"></i></span> <span>Directory</span>
@@ -62,75 +74,188 @@
                 <div class="nav-actions">
                     <button class="icon-btn"><i class="far fa-bell"></i><span class="badge">3</span></button>
                     <div class="user-profile">
-                        <div class="user-avatar">AD</div>
+                        <div class="user-avatar">PS</div>
                     </div>
                 </div>
             </header>
 
             <div id="dashboard" class="page-content active">
                 <div class="page-header">
-                    <h1 class="page-title">Dashboard Overview</h1>
-                    <p class="page-subtitle">Welcome back, Administrator.</p>
+                    <h1 class="page-title">Welcome, Priya</h1>
+                    <p class="page-subtitle">Have a great day at work! [cite: 17]</p>
                 </div>
+                
+                <div class="dashboard-grid">
+                    
+                    <div class="left-col">
+                        
+                        <div class="card quick-actions-grid">
+                            <h3 class="card-title" style="margin-bottom: 20px;">Quick Actions [cite: 40]</h3>
+                            <div class="action-box">
+                                <button class="icon-btn bg-blue"><i class="fas fa-sign-out-alt"></i></button>
+                                <div><p class="action-label">Apply Leave [cite: 20]</p><small>Request time off [cite: 20]</small></div>
+                            </div>
+                            <div class="action-box">
+                                <button class="icon-btn bg-green"><i class="fas fa-clock"></i></button>
+                                <div><p class="action-label">Check-in [cite: 21]</p><small>Mark attendance [cite: 21]</small></div>
+                            </div>
+                            <div class="action-box">
+                                <button class="icon-btn bg-purple"><i class="fas fa-edit"></i></button>
+                                <div><p class="action-label">Log Hours [cite: 22]</p><small>Track work time [cite: 22]</small></div>
+                            </div>
+                            <div class="action-box">
+                                <button class="icon-btn bg-red"><i class="fas fa-file-invoice"></i></button>
+                                <div><p class="action-label">Payslip [cite: 23]</p><small>View salary details [cite: 24]</small></div>
+                            </div>
+                            <div class="action-box">
+                                <button class="icon-btn bg-orange"><i class="fas fa-upload"></i></button>
+                                <div><p class="action-label">Upload Doc [cite: 41]</p><small>Store documents [cite: 41]</small></div>
+                            </div>
+                            <div class="action-box">
+                                <button class="icon-btn bg-teal"><i class="fas fa-ticket-alt"></i></button>
+                                <div><p class="action-label">Raise Ticket [cite: 25]</p><small>Get support [cite: 25]</small></div>
+                            </div>
+                        </div>
 
-                <div class="stats-grid">
-                    <div class="stat-box">
-                        <div class="stat-icon bg-blue"><i class="fas fa-users"></i></div>
-                        <div>
-                            <div class="stat-value">1,248</div>
-                            <div class="stat-label">Total Employees</div>
+                        <div class="card">
+                            <h3 class="card-title">Attendance & Leave [cite: 26] <a href="#" class="view-all-link">View Details [cite: 27]</a></h3>
+                            <div class="attendance-grid">
+                                <div>
+                                    <p class="summary-label">Status Today [cite: 32]</p>
+                                    <h4 class="summary-value text-green">Present [cite: 33]</h4>
+                                </div>
+                                <div>
+                                    <p class="summary-label">Hours This Month [cite: 34]</p>
+                                    <h4 class="summary-value">168 hrs [cite: 34]</h4>
+                                </div>
+                                <div>
+                                    <p class="summary-label">Casual Leave [cite: 35]</p>
+                                    <h4 class="summary-value">8 days [cite: 35]</h4>
+                                </div>
+                                <div>
+                                    <p class="summary-label">Sick Leave [cite: 36]</p>
+                                    <h4 class="summary-value">5 days [cite: 36]</h4>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-icon bg-green"><i class="fas fa-check-circle"></i></div>
-                        <div>
-                            <div class="stat-value">98%</div>
-                            <div class="stat-label">On Time</div>
-                        </div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-icon bg-purple"><i class="fas fa-file-invoice"></i></div>
-                        <div>
-                            <div class="stat-value">24</div>
-                            <div class="stat-label">New Applications</div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="chart-section" style="margin-bottom: 30px;">
-                    <div class="card">
-                        <h3 class="card-title">Attendance Analytics</h3>
-                        <div style="height: 300px; position: relative;">
-                            <canvas id="attendanceChart"></canvas>
+                        <div class="card">
+                            <h3 class="card-title">My Tasks [cite: 28] <a href="#" class="view-all-link">View All [cite: 42]</a></h3>
+                            <div class="task-list">
+                                <div class="task-item pending">
+                                    <i class="fas fa-hourglass-half"></i>
+                                    <p>Complete Q2 Performance Review [cite: 37]</p>
+                                    <small>Due: Tomorrow [cite: 37]</small>
+                                </div>
+                                <div class="task-item pending">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <p>Submit Project Timeline [cite: 38]</p>
+                                    <small>Due: 3 days [cite: 38]</small>
+                                </div>
+                                <div class="task-item completed">
+                                    <i class="fas fa-check-circle"></i>
+                                    <p>Update Design System Documentation [cite: 39]</p>
+                                    <small>Completed today [cite: 39]</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <h3 class="card-title">Payroll Summary [cite: 54] <a href="#" class="view-all-link">View Details [cite: 55]</a></h3>
+                            <div class="payroll-summary">
+                                <div>
+                                    <p class="summary-label">May 2024 Payslip [cite: 57]</p>
+                                    <h4 class="summary-value text-primary">₹85,000 [cite: 58]</h4>
+                                    <small>Salary credited on 1st May 2024 [cite: 62]</small>
+                                </div>
+                                <div>
+                                    <p class="summary-label">Annual CTC [cite: 63]</p>
+                                    <h4 class="summary-value">₹12.5L [cite: 64]</h4>
+                                </div>
+                                <div>
+                                    <p class="summary-label">Next Credit [cite: 65]</p>
+                                    <h4 class="summary-value">1st Jun [cite: 65]</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="right-col">
+                        
+                        <div class="card profile-card">
+                            <h3 class="card-title">My Profile [cite: 56] <a href="#" class="view-all-link" style="font-size: 12px;"><i class="fas fa-edit"></i> Edit [cite: 81]</a></h3>
+                            <div class="profile-header">
+                                <div class="user-avatar" style="width: 70px; height: 70px; font-size: 24px;">PS</div>
+                                <h4 class="name">Priya Sharma [cite: 59]</h4>
+                                <p class="role">Senior Product Designer [cite: 61]</p>
+                            </div>
+                            <div class="profile-details">
+                                <p><strong>Employee ID:</strong> EMP-2847 [cite: 82]</p>
+                                <p><strong>Department:</strong> Design & UX [cite: 83]</p>
+                                <p><strong>Reporting Manager:</strong> Rajesh Kumar [cite: 84, 85]</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card announcement-card">
+                            <h3 class="card-title">Announcements [cite: 19] <a href="#" class="view-all-link">View All [cite: 42]</a></h3>
+                            <div class="announcement-item">
+                                <p class="announcement-title">New Office Opening [cite: 50]</p>
+                                <p class="announcement-body">We're excited to announce our new Bangalore office opening next month! [cite: 52]</p>
+                                <small>Posted 2 days ago [cite: 52]</small>
+                            </div>
+                            <div class="announcement-item">
+                                <p class="announcement-title">Birthday Celebration [cite: 73]</p>
+                                <p class="announcement-body">Join us in wishing Amit Kumar a very happy birthday today! [cite: 74]</p>
+                                <small>Today</small>
+                            </div>
+                        </div>
+
+                        <div class="card event-card">
+                            <h3 class="card-title">Upcoming Events [cite: 43] <a href="#" class="view-all-link">View Calendar [cite: 68]</a></h3>
+                            
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="day-num">18 [cite: 44]</span>
+                                    <span class="month-name">MAY [cite: 46]</span>
+                                </div>
+                                <div class="event-info">
+                                    <p class="event-title">Team Strategy Meeting [cite: 45]</p>
+                                    <small>10:00 AM - 11:30 AM [cite: 47]</small>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="day-num">22 [cite: 69]</span>
+                                    <span class="month-name">MAY [cite: 71]</span>
+                                </div>
+                                <div class="event-info">
+                                    <p class="event-title">Design Thinking Workshop [cite: 70]</p>
+                                    <small>2:00 PM - 5:00 PM [cite: 72]</small>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="day-num">26 [cite: 75]</span>
+                                    <span class="month-name">MAY [cite: 77]</span>
+                                </div>
+                                <div class="event-info">
+                                    <p class="event-title">Holiday - Memorial Day [cite: 76]</p>
+                                    <small>All Day [cite: 78]</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
-
-                <div class="card">
-                    <h3 class="card-title">Recent Activity (Dynamic Data)</h3>
-                    <div class="table-responsive">
-                        <table class="data-table" id="activity-table">
-                            <thead>
-                                <tr>
-                                    <th>User</th>
-                                    <th>Activity</th>
-                                    <th>Time</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                </tbody>
-                        </table>
-                    </div>
                 </div>
-            </div>
 
             <div id="employees" class="page-content">
                 <div class="page-header">
                     <h1 class="page-title">Employee Directory</h1>
                 </div>
                 <div class="employee-grid" id="employee-grid">
-                    <div class="card" style="padding: 20px; color: #666;">Directory module content... (See JS for mock card rendering)</div>
+                    <div class="card" style="padding: 20px; color: #666;">Directory module content...</div>
                 </div>
             </div>
             <div id="attendance" class="page-content">
@@ -151,6 +276,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             if (typeof App !== 'undefined' && typeof App.init === 'function') {
+                // Initialize App (This runs chart/mock data)
                 App.init();
             }
             
@@ -159,7 +285,7 @@
                 if (link.getAttribute('href') === '#') {
                     link.onclick = function(event) {
                         event.preventDefault();
-                        const pageId = link.querySelector('span:last-child').textContent.toLowerCase();
+                        const pageId = link.querySelector('span:last-child').textContent.toLowerCase().split(' ')[0];
                         App.navigate(pageId, link);
                     };
                 }
