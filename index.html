@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HR Employee Portal - Dashboard</title>
+    <title>NexusHR Portal - Complete Admin Dashboard</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -24,26 +24,38 @@
                 <i class="fas fa-layer-group text-primary"></i> <span>Nexus<span class="text-primary">HR</span></span>
             </div>
             <nav class="sidebar-menu">
-                <a class="sidebar-item active" href="/NexusHR/index.html">
+                <a class="sidebar-item active" href="/NexusHR/index.html" data-page="dashboard">
                     <span class="sidebar-icon"><i class="fas fa-home"></i></span> <span>Dashboard</span>
                 </a>
-                <a class="sidebar-item" href="#">
+                <a class="sidebar-item" href="#" data-page="attendance">
                     <span class="sidebar-icon"><i class="fas fa-calendar-check"></i></span> <span>Attendance</span>
                 </a>
-                <a class="sidebar-item" href="#">
+                <a class="sidebar-item" href="#" data-page="leave">
                     <span class="sidebar-icon"><i class="fas fa-sign-out-alt"></i></span> <span>Leave</span>
                 </a>
-                <a class="sidebar-item" href="#">
+                <a class="sidebar-item" href="#" data-page="payroll">
                     <span class="sidebar-icon"><i class="fas fa-money-check-alt"></i></span> <span>Payroll</span>
                 </a>
-                 <a class="sidebar-item" href="#">
+                <a class="sidebar-item" href="#" data-page="tasks">
                     <span class="sidebar-icon"><i class="fas fa-tasks"></i></span> <span>Tasks</span>
                 </a>
-                <a class="sidebar-item" href="#">
+                <a class="sidebar-item" href="#" data-page="performance">
                     <span class="sidebar-icon"><i class="fas fa-chart-line"></i></span> <span>Performance</span>
                 </a>
-                 <a class="sidebar-item" href="#">
+                 <a class="sidebar-item" href="#" data-page="training">
+                    <span class="sidebar-icon"><i class="fas fa-graduation-cap"></i></span> <span>Training</span>
+                </a>
+                 <a class="sidebar-item" href="#" data-page="directory">
                     <span class="sidebar-icon"><i class="fas fa-users"></i></span> <span>Directory</span>
+                </a>
+                 <a class="sidebar-item" href="#" data-page="travel">
+                    <span class="sidebar-icon"><i class="fas fa-plane"></i></span> <span>Travel</span>
+                </a>
+                 <a class="sidebar-item" href="#" data-page="documents">
+                    <span class="sidebar-icon"><i class="fas fa-folder-open"></i></span> <span>Documents</span>
+                </a>
+                 <a class="sidebar-item" href="#" data-page="helpdesk">
+                    <span class="sidebar-icon"><i class="fas fa-life-ring"></i></span> <span>Help Desk</span>
                 </a>
                 <a class="sidebar-item" href="/NexusHR/settings.html">
                     <span class="sidebar-icon"><i class="fas fa-cog"></i></span> <span>Settings</span>
@@ -81,7 +93,7 @@
 
             <div id="dashboard" class="page-content active">
                 <div class="page-header">
-                    <h1 class="page-title">Welcome, Priya</h1>
+                    <h1 class="page-title">Welcome, Priya [cite: 15]</h1>
                     <p class="page-subtitle">Have a great day at work! [cite: 17]</p>
                 </div>
                 
@@ -186,14 +198,14 @@
                         <div class="card profile-card">
                             <h3 class="card-title">My Profile [cite: 56] <a href="#" class="view-all-link" style="font-size: 12px;"><i class="fas fa-edit"></i> Edit [cite: 81]</a></h3>
                             <div class="profile-header">
-                                <div class="user-avatar" style="width: 70px; height: 70px; font-size: 24px;">PS</div>
+                                <div class="user-avatar" style="width: 70px; height: 70px; font-size: 24px;">PS [cite: 60]</div>
                                 <h4 class="name">Priya Sharma [cite: 59]</h4>
                                 <p class="role">Senior Product Designer [cite: 61]</p>
                             </div>
                             <div class="profile-details">
-                                <p><strong>Employee ID:</strong> EMP-2847 [cite: 82]</p>
-                                <p><strong>Department:</strong> Design & UX [cite: 83]</p>
-                                <p><strong>Reporting Manager:</strong> Rajesh Kumar [cite: 84, 85]</p>
+                                <p><strong>Employee ID [cite: 66]:</strong> EMP-2847 [cite: 82]</p>
+                                <p><strong>Department [cite: 67]:</strong> Design & UX [cite: 83]</p>
+                                <p><strong>Reporting Manager [cite: 84]:</strong> Rajesh Kumar [cite: 85]</p>
                             </div>
                         </div>
                         
@@ -207,7 +219,7 @@
                             <div class="announcement-item">
                                 <p class="announcement-title">Birthday Celebration [cite: 73]</p>
                                 <p class="announcement-body">Join us in wishing Amit Kumar a very happy birthday today! [cite: 74]</p>
-                                <small>Today</small>
+                                <small>Today [cite: 74]</small>
                             </div>
                         </div>
 
@@ -248,22 +260,378 @@
                     </div>
                     
                 </div>
+            </div>
+
+
+            <div id="attendance" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Attendance Logs [cite: 3]</h1>
+                    <p class="page-subtitle">Track your time, attendance, and leave requests.</p>
+                </div>
+                
+                <div class="card" style="margin-bottom: 24px;">
+                    <h3 class="card-title">Check-in / Check-out</h3>
+                    <div style="display: flex; gap: 20px; align-items: center;">
+                        <button class="form-btn" style="width: 200px; background: var(--success);"><i class="fas fa-sign-in-alt"></i> Check In</button>
+                        <button class="form-btn" style="width: 200px; background: var(--danger);"><i class="fas fa-sign-out-alt"></i> Check Out</button>
+                        <p style="margin: 0;">**Total Hours Today: 7.5 hrs**</p>
+                    </div>
                 </div>
 
-            <div id="employees" class="page-content">
-                <div class="page-header">
-                    <h1 class="page-title">Employee Directory</h1>
-                </div>
-                <div class="employee-grid" id="employee-grid">
-                    <div class="card" style="padding: 20px; color: #666;">Directory module content...</div>
+                <div class="dashboard-grid" style="grid-template-columns: 1fr 2fr;">
+                    <div class="left-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Monthly Calendar</h3>
+                            <div style="height: 300px; text-align: center; color: var(--text-muted);">
+                                [Placeholder for Calendar UI]
+                            </div>
+                        </div>
+                        <div class="card">
+                             <h3 class="card-title">Summary</h3>
+                             <p>Total Hours This Month: 168 hrs [cite: 34]</p>
+                             <p>Overtime: 10 hrs</p>
+                             <p>Late / Early Exit: 2 instances</p>
+                        </div>
+                    </div>
+                    <div class="right-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Daily Logs Table</h3>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Check In</th>
+                                            <th>Check Out</th>
+                                            <th>Total Hours</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>2024-05-10</td><td>09:00 AM</td><td>05:30 PM</td><td>8.5 hrs</td><td><span class="status-badge status-success">Present</span></td></tr>
+                                        <tr><td>2024-05-09</td><td>09:30 AM</td><td>06:00 PM</td><td>8.5 hrs</td><td><span class="status-badge status-pending">Late</span></td></tr>
+                                        <tr><td>2024-05-08</td><td>-</td><td>-</td><td>-</td><td><span class="status-badge bg-danger" style="background: var(--danger); color: white;">Leave</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="attendance" class="page-content">
+
+            <div id="leave" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Leave Management [cite: 4]</h1>
+                    <p class="page-subtitle">Request and track your time off.</p>
+                </div>
+                
+                <div class="dashboard-grid">
+                     <div class="left-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Apply Leave</h3>
+                            <form>
+                                <div class="form-group"><label>Leave Type</label><select><option>Casual Leave</option><option>Sick Leave</option><option>Planned Leave</option></select></div>
+                                <div class="form-group"><label>Start Date</label><input type="date"></div>
+                                <div class="form-group"><label>End Date</label><input type="date"></div>
+                                <div class="form-group"><label>Reason</label><textarea rows="3" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-body);"></textarea></div>
+                                <button type="submit" class="form-btn" style="width: auto;">Submit Request</button>
+                            </form>
+                        </div>
+                    </div>
+                     <div class="right-col" style="gap: 24px;">
+                         <div class="card">
+                            <h3 class="card-title">Leave Balances</h3>
+                             <p><strong>Casual Leave (CL):</strong> 8 days [cite: 35]</p>
+                             <p><strong>Sick Leave (SL):</strong> 5 days [cite: 36]</p>
+                             <p><strong>Planned Leave (PL):</strong> 12 days</p>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Pending Approvals</h3>
+                            <div class="task-list">
+                                <div class="task-item pending"><i class="fas fa-user-clock"></i><p>1 day CL requested by John</p><small>Action Required</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="payroll" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Payroll and Compensation [cite: 5]</h1>
+                    <p class="page-subtitle">View payslips and salary details.</p>
+                </div>
+
+                 <div class="dashboard-grid" style="grid-template-columns: 1fr 1fr;">
+                     <div class="left-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Salary Breakdown (May 2024)</h3>
+                            <div style="display: flex; justify-content: space-between; font-weight: 600; padding-bottom: 10px; border-bottom: 1px solid var(--border);">
+                                <span>Net Pay:</span><span class="text-primary">₹85,000 [cite: 58]</span>
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <p style="font-weight: 600; color: var(--success);">Earnings</p>
+                                <p style="display: flex; justify-content: space-between; font-size: 14px; margin: 5px 0;">Basic Salary: 55,000</p>
+                                <p style="display: flex; justify-content: space-between; font-size: 14px; margin: 5px 0;">HRA & Allowances: 40,000</p>
+                                <p style="font-weight: 600; color: var(--danger); margin-top: 20px;">Deductions</p>
+                                <p style="display: flex; justify-content: space-between; font-size: 14px; margin: 5px 0;">EPF: 5,000</p>
+                                <p style="display: flex; justify-content: space-between; font-size: 14px; margin: 5px 0;">Tax (TDS): 5,000</p>
+                            </div>
+                             <button class="form-btn" style="width: auto; background: var(--success); margin-top: 20px;"><i class="fas fa-download"></i> Download Payslip</button>
+                        </div>
+                    </div>
+                     <div class="right-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Previous Payslips</h3>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead><tr><th>Month</th><th>Net Pay</th><th>Action</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Apr 2024</td><td>₹85,000</td><td><button class="icon-btn" style="color: var(--primary);"><i class="fas fa-download"></i></button></td></tr>
+                                        <tr><td>Mar 2024</td><td>₹85,000</td><td><button class="icon-btn" style="color: var(--primary);"><i class="fas fa-download"></i></button></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card">
+                             <h3 class="card-title">Tax Summary</h3>
+                             <p>Annual CTC: ₹12.5L [cite: 64]</p>
+                             <p>Taxable Income YTD: ₹8,00,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tasks" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">My Tasks & Projects [cite: 5]</h1>
+                    <p class="page-subtitle">Track your project and daily tasks.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Task List <button class="form-btn" style="width: auto; float: right; padding: 8px 15px;"><i class="fas fa-plus"></i> Add Task</button></h3>
+                    <div class="task-list">
+                         <div class="task-item pending" style="border-left: 3px solid #f59e0b;">
+                             <p>Complete Q2 Performance Review [cite: 37]</p><small>Due: Tomorrow</small>
+                         </div>
+                         <div class="task-item pending" style="border-left: 3px solid #f59e0b;">
+                             <p>Submit Project Timeline [cite: 38]</p><small>Due: 3 days</small>
+                         </div>
+                         <div class="task-item" style="border-left: 3px solid var(--primary);">
+                             <p>Prepare Design Mockups for Feature X</p><small>In Progress [cite: 53]</small>
+                         </div>
+                         <div class="task-item completed" style="border-left: 3px solid var(--success);">
+                             <p>Update Design System Documentation [cite: 39]</p><small>Completed today [cite: 80]</small>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="performance" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Performance Review [cite: 6]</h1>
+                    <p class="page-subtitle">Review goals, KPIs, and feedback.</p>
+                </div>
+                 <div class="dashboard-grid" style="grid-template-columns: 2fr 1fr;">
+                    <div class="left-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Goals & Objectives (Q2 2024)</h3>
+                            <p>Goal 1: Improve product adoption by 15%.</p>
+                            <p>Goal 2: Complete the Design System documentation[cite: 39].</p>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">KPI Ratings</h3>
+                            <p>Quality Score: 4.5/5.0</p>
+                            <p>Project Completion Rate: 95%</p>
+                        </div>
+                    </div>
+                    <div class="right-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Manager Feedback</h3>
+                            <p>"Priya consistently delivers high-quality work and is a strong contributor to the team."</p>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Appraisal Cycle</h3>
+                            <p>Next Review Date: October 1st, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="training" class="page-content">
                  <div class="page-header">
-                    <h1 class="page-title">Attendance Logs</h1>
+                    <h1 class="page-title">Training & Learning [cite: 7]</h1>
+                    <p class="page-subtitle">Access course libraries and track your certificates.</p>
+                </div>
+                
+                <div class="dashboard-grid" style="grid-template-columns: 2fr 1fr;">
+                    <div class="left-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Course Library</h3>
+                            <p>Course 1: UX Writing Essentials (Enrolled)</p>
+                            <p>Course 2: Advanced Figma Techniques (Not Started)</p>
+                        </div>
+                    </div>
+                    <div class="right-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Upcoming Training</h3>
+                            <p>Design Thinking Workshop [cite: 70]: May 22nd [cite: 69]</p>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Completed Courses & Certificates</h3>
+                            <p>Introduction to Agile (Completed)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="directory" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Employee Directory [cite: 7]</h1>
+                    <p class="page-subtitle">Find colleagues across the company.</p>
+                </div>
+
+                <div class="card" style="margin-bottom: 24px;">
+                    <h3 class="card-title">Filters</h3>
+                    <div style="display: flex; gap: 15px;">
+                         <select><option>All Departments</option><option>Design & UX [cite: 83]</option></select>
+                         <select><option>All Roles</option><option>Senior Product Designer [cite: 61]</option></select>
+                         <select><option>All Locations</option><option>Bangalore [cite: 52]</option></select>
+                    </div>
+                </div>
+                
+                <div class="employee-grid" id="employee-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div class="card" style="text-align:center; padding: 15px;">
+                        <div class="user-avatar" style="width: 50px; height: 50px; margin: 0 auto 10px; background: #8b5cf6;">PS</div>
+                        <h4 style="margin:5px 0">Priya Sharma [cite: 59]</h4>
+                        <p style="margin:0; color:#64748b; font-size:13px">Senior Product Designer [cite: 61]</p>
+                    </div>
+                    <div class="card" style="text-align:center; padding: 15px;">
+                        <div class="user-avatar" style="width: 50px; height: 50px; margin: 0 auto 10px; background: #10b981;">RK</div>
+                        <h4 style="margin:5px 0">Rajesh Kumar [cite: 85]</h4>
+                        <p style="margin:0; color:#64748b; font-size:13px">Design Manager [cite: 84]</p>
+                    </div>
+                     <div class="card" style="text-align:center; padding: 15px;">
+                        <div class="user-avatar" style="width: 50px; height: 50px; margin: 0 auto 10px; background: #3b82f6;">AK</div>
+                        <h4 style="margin:5px 0">Amit Kumar [cite: 74]</h4>
+                        <p style="margin:0; color:#64748b; font-size:13px">Product Analyst</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="travel" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Travel & Expense [cite: 8]</h1>
+                    <p class="page-subtitle">Submit expense claims for reimbursement.</p>
+                </div>
+                
+                <div class="dashboard-grid" style="grid-template-columns: 1fr 2fr;">
+                    <div class="left-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Expense Claim Form</h3>
+                            <form>
+                                <div class="form-group"><label>Category</label><select><option>Travel</option><option>Food</option><option>Hotel</option></select></div>
+                                <div class="form-group"><label>Date</label><input type="date"></div>
+                                <div class="form-group"><label>Amount</label><input type="number" placeholder="e.g., 5000"></div>
+                                <div class="form-group"><label>Description</label><textarea rows="2" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-body);"></textarea></div>
+                                <button type="submit" class="form-btn" style="width: auto;">Submit Expense</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="right-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Expense History</h3>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead><tr><th>Date</th><th>Category</th><th>Amount</th><th>Status</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>2024-05-01</td><td>Hotel</td><td>₹12,000</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+                                        <tr><td>2024-04-28</td><td>Travel</td><td>₹3,500</td><td><span class="status-badge status-success">Reimbursed</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card">
+                             <h3 class="card-title">Reimbursement Summary</h3>
+                             <p>Claims Pending: ₹15,500</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="documents" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">My Documents [cite: 9]</h1>
+                    <p class="page-subtitle">Manage all personal and professional files.</p>
+                </div>
+                
+                 <div class="card" style="margin-bottom: 24px;">
+                    <h3 class="card-title">Actions <button class="form-btn" style="width: auto; float: right; padding: 8px 15px;"><i class="fas fa-upload"></i> Upload Document [cite: 41]</button></h3>
+                    <div style="display: flex; gap: 15px;">
+                         <select><option>All Categories</option><option>Payroll</option><option>HR</option><option>Legal</option></select>
+                         <select><option>All Types</option><option>PDF</option><option>DOCX</option></select>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">File List</h3>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>File Name</th><th>Category</th><th>Last Modified</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>Salary Slip - May 2024</td><td>Payroll</td><td>2024-05-01</td><td><button class="icon-btn" style="color: var(--primary);"><i class="fas fa-download"></i></button></td></tr>
+                                <tr><td>Offer Letter - 2022</td><td>HR</td><td>2022-01-15</td><td><button class="icon-btn" style="color: var(--primary);"><i class="fas fa-download"></i></button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="helpdesk" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Help Desk & Support [cite: 10]</h1>
+                    <p class="page-subtitle">Raise tickets or check the knowledge base.</p>
+                </div>
+                
+                <div class="dashboard-grid" style="grid-template-columns: 1fr 2fr;">
+                    <div class="left-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">Raise New Ticket [cite: 25]</h3>
+                            <form>
+                                <div class="form-group"><label>Subject</label><input type="text" placeholder="e.g., VPN access issue"></div>
+                                <div class="form-group"><label>Description</label><textarea rows="4" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-body);"></textarea></div>
+                                <button type="submit" class="form-btn" style="width: auto;">Submit Ticket</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="right-col" style="gap: 24px;">
+                        <div class="card">
+                            <h3 class="card-title">My Tickets</h3>
+                             <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead><tr><th>ID</th><th>Subject</th><th>Status</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>TKT-0015</td><td>Annual leave form issue</td><td><span class="status-badge status-pending">Open</span></td></tr>
+                                        <tr><td>TKT-0014</td><td>New laptop request</td><td><span class="status-badge status-success">Closed</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card">
+                             <h3 class="card-title">FAQ / Knowledge Base</h3>
+                             <p>How do I reset my password?</p>
+                             <p>When is payday?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="settings" class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Settings [cite: 11]</h1>
+                    <p class="page-subtitle">Loading settings from settings.html...</p>
                 </div>
                 <div class="card">
-                    <p style="padding: 20px; color: #666;">Attendance module content...</p>
+                    <p style="padding: 20px; color: #666;">This content is dynamically loaded from the dedicated `settings.html` file to maintain structure.</p>
                 </div>
             </div>
 
@@ -280,16 +648,21 @@
                 App.init();
             }
             
-            // Re-map the sidebar items for internal navigation
+            // Setup navigation for all sidebar links using data-page attribute
             document.querySelectorAll('.sidebar-menu a').forEach(link => {
-                if (link.getAttribute('href') === '#') {
+                const pageId = link.getAttribute('data-page');
+                if (pageId) {
                     link.onclick = function(event) {
                         event.preventDefault();
-                        const pageId = link.querySelector('span:last-child').textContent.toLowerCase().split(' ')[0];
                         App.navigate(pageId, link);
                     };
                 }
             });
+            
+            // Special handling for settings.html which is a separate page
+             document.querySelector('.sidebar-item[href="/NexusHR/settings.html"]').onclick = function(event) {
+                // Let the browser handle the navigation to the dedicated settings page
+            };
         });
     </script>
 </body>
