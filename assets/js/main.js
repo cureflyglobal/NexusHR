@@ -2,17 +2,30 @@ const App = {
     init: function() {
         this.renderCharts();
         this.loadMockData();
-        this.setupEventListeners();
     },
 
-    // 1. Navigation Logic (Used primarily for theme toggle and sidebar open/close)
+    // 1. Navigation Logic
     navigate: function(pageId, element) {
-        // Simple internal page change (used for placeholder sections like Attendance/Directory)
+        // Clear active status on all pages and links
         document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
-        document.getElementById(pageId).classList.add('active');
-        
         document.querySelectorAll('.sidebar-menu a').forEach(i => i.classList.remove('active'));
-        if(element) element.classList.add('active');
+
+        // Show the requested page
+        const targetPage = document.getElementById(pageId);
+        if (targetPage) {
+            targetPage.classList.add('active');
+        }
+
+        // Set the active link
+        if (element) {
+             element.classList.add('active');
+        } else {
+            // Find and activate the link by data-page attribute if navigation was internal (like a button click)
+            const correspondingLink = document.querySelector(`.sidebar-item[data-page="${pageId}"]`);
+            if (correspondingLink) {
+                 correspondingLink.classList.add('active');
+            }
+        }
         
         // Close sidebar on mobile after click
         document.getElementById('sidebar').classList.remove('open');
@@ -28,40 +41,15 @@ const App = {
         document.getElementById('btn-' + theme).classList.add('active');
     },
 
-    // 2. Mock Data Rendering (Simulating Backend)
+    // 2. Mock Data Rendering (Simplified for the new dashboard structure)
     loadMockData: function() {
-        const activityData = [
-            { user: "Sarah Connor", action: "Requested Leave", time: "2 mins ago", status: "pending" },
-            { user: "John Wick", action: "Completed Task", time: "1 hour ago", status: "success" },
-            { user: "Tony Stark", action: "Updated Profile", time: "3 hours ago", status: "success" }
-        ];
-
-        const tableBody = document.querySelector('#activity-table tbody');
-        if(tableBody) {
-            tableBody.innerHTML = activityData.map(item => `
-                <tr>
-                    <td><b>${item.user}</b></td>
-                    <td>${item.action}</td>
-                    <td>${item.time}</td>
-                    <td><span class="status-badge status-${item.status}">${item.status}</span></td>
-                </tr>
-            `).join('');
-        }
+        // This function will primarily handle initializing the dashboard elements if needed
         
-        // Populate Employee Grid
-        const grid = document.getElementById('employee-grid');
-        if(grid) {
-            grid.innerHTML = [1,2,3,4].map(i => `
-                <div class="card" style="text-align:center">
-                    <div class="user-avatar" style="width:60px; height:60px; margin:0 auto 10px; font-size:20px">U${i}</div>
-                    <h4 style="margin:5px 0">Employee ${i}</h4>
-                    <p style="margin:0; color:#64748b; font-size:13px">Developer</p>
-                </div>
-            `).join('');
-        }
+        // This chart setup is part of the premium feel, so it's kept.
+        this.renderCharts(); 
     },
 
-    // 3. Chart.js Setup
+    // 3. Chart.js Setup (Kept for the Dashboard Overview)
     renderCharts: function() {
         const ctx = document.getElementById('attendanceChart');
         if (ctx) {
@@ -86,9 +74,5 @@ const App = {
                 }
             });
         }
-    },
-
-    setupEventListeners: function() {
-        // Any extra listeners
     }
 };
