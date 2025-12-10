@@ -1,26 +1,30 @@
 const App = {
     init: function() {
         this.renderCharts();
-        this.loadMockData();
     },
 
     // 1. Navigation Logic
     navigate: function(pageId, element) {
-        // Clear active status on all pages and links
+        // Find and deactivate the currently active sidebar item
+        const activeLink = document.querySelector('.sidebar-menu a.active');
+        if (activeLink) {
+            activeLink.classList.remove('active');
+        }
+        
+        // Deactivate all page content sections
         document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
-        document.querySelectorAll('.sidebar-menu a').forEach(i => i.classList.remove('active'));
 
-        // Show the requested page
+        // Activate the requested page content
         const targetPage = document.getElementById(pageId);
         if (targetPage) {
             targetPage.classList.add('active');
         }
 
-        // Set the active link
+        // Activate the corresponding sidebar link
         if (element) {
              element.classList.add('active');
         } else {
-            // Find and activate the link by data-page attribute if navigation was internal (like a button click)
+            // Fallback for internal navigation (e.g., from a button on the page)
             const correspondingLink = document.querySelector(`.sidebar-item[data-page="${pageId}"]`);
             if (correspondingLink) {
                  correspondingLink.classList.add('active');
@@ -28,49 +32,68 @@ const App = {
         }
         
         // Close sidebar on mobile after click
-        document.getElementById('sidebar').classList.remove('open');
+        const sidebar = document.getElementById('sidebar');
+        if (window.innerWidth <= 768 && sidebar.classList.contains('open')) {
+             sidebar.classList.remove('open');
+        }
     },
 
+    // 2. Mobile Sidebar Toggle
     toggleSidebar: function() {
         document.getElementById('sidebar').classList.toggle('open');
     },
 
+    // 3. Theme Toggle
     setTheme: function(theme) {
         document.body.className = theme + '-mode';
         document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
         document.getElementById('btn-' + theme).classList.add('active');
     },
 
-    // 2. Mock Data Rendering (Simplified for the new dashboard structure)
-    loadMockData: function() {
-        // This function will primarily handle initializing the dashboard elements if needed
-        
-        // This chart setup is part of the premium feel, so it's kept.
-        this.renderCharts(); 
-    },
-
-    // 3. Chart.js Setup (Kept for the Dashboard Overview)
+    // 4. Chart.js Setup (Donut Chart for Dashboard)
     renderCharts: function() {
-        const ctx = document.getElementById('attendanceChart');
+        const ctx = document.getElementById('attendanceDonutChart');
         if (ctx) {
             new Chart(ctx, {
-                type: 'line',
+                type: 'doughnut',
                 data: {
-                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                    labels: ['Present', 'Absent', 'On Leave'],
                     datasets: [{
-                        label: 'Present Employees',
-                        data: [1200, 1230, 1150, 1240, 1210, 800],
-                        borderColor: '#2563eb',
-                        tension: 0.4,
-                        fill: true,
-                        backgroundColor: 'rgba(37, 99, 235, 0.1)'
+                        data: [90, 5, 5], // Mock data: 90% Present, 5% Absent, 5% On Leave
+                        backgroundColor: [
+                            '#10b981', // Primary Teal
+                            '#ef4444', // Danger Red
+                            '#3b82f6'  // Secondary Blue
+                        ],
+                        hoverOffset: 4
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: { y: { beginAtZero: false } }
+                    cutout: '70%',
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    // Disable animation on initial load to make it quick
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true
+                    }
                 }
             });
         }
