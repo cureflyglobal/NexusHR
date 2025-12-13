@@ -24,7 +24,7 @@ const App = {
         if (element) {
              element.classList.add('active');
         } else {
-            // Fallback for internal navigation (e.g., from a button on the page)
+            // Fallback for internal navigation (e.g., from a quick action or button on the page)
             const correspondingLink = document.querySelector(`.sidebar-item[data-page="${pageId}"]`);
             if (correspondingLink) {
                  correspondingLink.classList.add('active');
