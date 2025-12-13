@@ -305,7 +305,8 @@ h3.card-title {
     gap: var(--spacing-sm);
     padding-top: 5px;
 }
-.action-box {
+/* IMPORTANT: Updated .action-box to support navigation <a> tag */
+.action-box { 
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
@@ -314,10 +315,13 @@ h3.card-title {
     background: var(--bg-surface);
     border: 1px solid var(--border);
     transition: 0.2s;
+    text-decoration: none; /* Fix for <a> tag */
+    color: var(--text-main); /* Fix for <a> tag */
 }
 .action-box:hover {
     background: var(--bg-body);
     box-shadow: var(--shadow-sm);
+    color: var(--text-main); /* Ensure hover maintains text color */
 }
 .action-box .icon-btn { color: white; border-radius: 6px; }
 
